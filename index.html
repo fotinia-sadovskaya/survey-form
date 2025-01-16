@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">We value your feedback! Please take a moment to fill out this survey.</p>
+      <form id="survey-form" action="#" method="post">
+        <!-- Name -->
+        <label id="name-label" for="name">
+          Name:
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </label>
+        <!-- Email -->
+        <label id="email-label" for="email">
+          Email:
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </label>
+        <!-- Age -->
+        <label id="number-label" for="number">
+          Age:
+          <input
+            type="number"
+            id="number"
+            name="age"
+            min="18"
+            max="99"
+            placeholder="Enter your age"
+            required
+          />
+        </label>
+        <!-- Dropdown -->
+        <label for="dropdown">
+          What is your favorite programming language?
+          <select id="dropdown" name="language">
+            <option value="">Select one</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <!-- Radio buttons -->
+        <fieldset>
+          <legend>How would you rate your coding skills?</legend>
+          <label>
+            <input type="radio" name="skill-level" value="beginner" required />
+            Beginner
+          </label>
+          <label>
+            <input type="radio" name="skill-level" value="intermediate" />
+            Intermediate
+          </label>
+          <label>
+            <input type="radio" name="skill-level" value="advanced" />
+            Advanced
+          </label>
+        </fieldset>
+        <!-- Checkboxes -->
+        <fieldset>
+          <legend>Which of these technologies have you used?</legend>
+          <label>
+            <input type="checkbox" name="technology" value="html" />
+            HTML
+          </label>
+          <label>
+            <input type="checkbox" name="technology" value="css" />
+            CSS
+          </label>
+          <label>
+            <input type="checkbox" name="technology" value="javascript" />
+            JavaScript
+          </label>
+          <label>
+            <input type="checkbox" name="technology" value="other" />
+            Other
+          </label>
+        </fieldset>
+        <!-- Textarea -->
+        <label for="comments">
+          Additional comments:
+          <textarea
+            id="comments"
+            name="comments"
+            rows="4"
+            cols="30"
+            placeholder="Share your thoughts here..."
+          ></textarea>
+        </label>
+        <!-- Submit -->
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
